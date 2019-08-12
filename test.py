@@ -4,7 +4,8 @@ print("\n0. Run sample test cases.")
 print("1. User-defined input: ")
 print("2. Exit")
 
-sample = ["? 1/2 * 3_3/4", "? 2_3/8 + 9/8", "? 2_1/2"]
+sample = ["? 1/2 * 3_3/4", "? 2_3/8 + 9/8", "? 2_1/2", \
+"? 4_1/3 / 2_1/6 - 3/4 * 2", "1/2 +      3_1/2", "? 3/4 + 2/6 + 2_2/4"]
 
 option = input("\nSelect option:")
 
