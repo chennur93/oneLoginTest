@@ -1,2 +1,2 @@
 # oneLoginTest
-coding challenge
+Run `python test.py` to execute the program.
