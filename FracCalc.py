@@ -52,16 +52,16 @@ class Calc:
         Computes the result of a given expression.
 
         Returns:
-            Result in the form of a fraction or integer. 
+            Result in the form of a fraction or integer.
         """
         temp = self.input.split()
-        operands = ['/', '*', '+', '-']
+        operators = ['/', '*', '+', '-']
         i = 0
 
         if temp[0] == "?":
             temp = temp[1:]
 
-        while i < len(operands):
+        while i < len(operators):
             if len(temp) == 1:
                 val = self.getFrac(temp[0])
                 if val.numerator > val.denominator and val.denominator != 1:
@@ -71,11 +71,11 @@ class Calc:
                 else:
                     return "= " + str(val)
             else:
-                if operands[i] in temp:
-                    op_index = temp.index(operands[i])
+                if operators[i] in temp:
+                    op_index = temp.index(operators[i])
                     operand_one = self.getFrac(temp[op_index - 1])
                     operand_two = self.getFrac(temp[op_index + 1])
-                    val = self.calculate(operands[i], operand_one, operand_two)
+                    val = self.calculate(operators[i], operand_one, operand_two)
                     temp[op_index-1] = val
                     temp.remove(temp[op_index])
                     temp.remove(temp[op_index])
